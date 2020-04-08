@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService} from '../../../services/product.service';
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../../services/product.service';
 import {Product} from '../../../models/product';
+import {Post} from './post';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-product-list',
@@ -9,9 +12,18 @@ import {Product} from '../../../models/product';
 })
 export class ProductListComponent implements OnInit {
 
+  readonly ROOT_URL = '';
   productList: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  posts: Observable<Post[]>;
+
+  getPost() {
+    this.posts = this.http.get<Post[]>(this.ROOT_URL + '/posts');
+  }
+
+
+  constructor(private productService: ProductService, private http: HttpClient) {
+  }
 
   ngOnInit(): void {
     this.productList = this.productService.getProducts();
