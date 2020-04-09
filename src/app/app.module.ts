@@ -13,6 +13,8 @@ import { CartComponent } from './components/shopping-cart/cart/cart.component';
 import { ProductListComponent } from './components/shopping-cart/product-list/product-list.component';
 import { CartItemComponent } from './components/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,14 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule
+    ProductItemComponent,
+    LoginComponent
   ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
