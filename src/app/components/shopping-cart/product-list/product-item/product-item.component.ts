@@ -1,8 +1,6 @@
-import {Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Product} from '../../../../models/product';
-import {Post} from './post';
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import {MessengerService} from '../../../../services/messenger.service';
 
 @Component({
   selector: 'app-product-item',
@@ -11,22 +9,16 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ProductItemComponent implements OnInit {
 
-  readonly ROOT_URL = '';
-
-  posts: Observable<Post>;
-
-  getPost() {
-    this.posts = this.http.get<Post>(this.ROOT_URL + '/posts');
-  }
-
   @Input() productItem: Product;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
 
   }
 
+  handleAddToCart() {
+    this.msg.sendMsg(this.productItem);
+  }
 
 }
