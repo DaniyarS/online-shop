@@ -16,6 +16,7 @@ import {ProductItemComponent} from './components/shopping-cart/product-list/prod
 import {LoginComponent} from './components/shared/login/login.component';
 import {FormsModule} from '@angular/forms';
 import {RegisterComponent} from './components/register/register.component';
+import { DetailsComponent } from './components/shopping-cart/details/details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {RegisterComponent} from './components/register/register.component';
     CartItemComponent,
     ProductItemComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DetailsComponent
   ],
   imports: [
     FlexLayoutModule,
