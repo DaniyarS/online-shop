@@ -1,7 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 import {Product} from '../models/product';
 import {Observable, of} from 'rxjs';
+
+
+import {CATEGORIES} from '../models/categories';
+import {Category} from '../models/category';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +27,7 @@ export class ProductService {
   ];
   private PRODUCTS: any;
 
+
   getProducts(): Product[] {
     return this.products;
   }
@@ -30,5 +36,13 @@ export class ProductService {
 
   getProduct(id: number): Observable<Product> {
     return of(this.PRODUCTS.find(product => product.id === id));
+  getCategory(): Observable<Category[]> {
+    return of(CATEGORIES);
+  }
+
+  getCategories(id: number): Observable<Category> {
+    return of(CATEGORIES.find(category => category.id === id));
+
+
   }
 }
