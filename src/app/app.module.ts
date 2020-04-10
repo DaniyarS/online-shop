@@ -16,6 +16,9 @@ import {ProductItemComponent} from './components/shopping-cart/product-list/prod
 import {LoginComponent} from './components/shared/login/login.component';
 import {FormsModule} from '@angular/forms';
 import {RegisterComponent} from './components/register/register.component';
+
+import { DetailsComponent } from './components/shopping-cart/details/details.component';
+
 import { CategoryListComponent } from './components/shopping-cart/product-list/category-list/category-list.component';
 import { AccessoriesComponent } from './components/shopping-cart/product-list/accessories/accessories.component';
 
@@ -33,6 +36,9 @@ import { AccessoriesComponent } from './components/shopping-cart/product-list/ac
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
+
+    DetailsComponent
+
     CategoryListComponent,
     AccessoriesComponent
   ],
