@@ -1,6 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 import {Product} from '../models/product';
+import {Observable, of} from 'rxjs';
+import {CATEGORIES} from '../models/categories';
+import {Category} from '../models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +23,18 @@ export class ProductService {
     new Product(10, 'Product 10', 'This is the product 10 description. The product is really cool!', 14840)
   ];
 
+
   getProducts(): Product[] {
     return this.products;
   }
 
-  constructor() { }
+  getCategory(): Observable<Category[]> {
+    return of(CATEGORIES);
+  }
+
+  getCategories(id: number): Observable<Category> {
+    return of(CATEGORIES.find(category => category.id === id));
+
+
+  }
 }
