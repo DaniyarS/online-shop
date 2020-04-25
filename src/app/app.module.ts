@@ -8,16 +8,20 @@ import {HeaderComponent} from './components/shared/header/header.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import {NavComponent} from './components/shared/nav/nav.component';
 import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
-import {CategoriesComponent} from './components/shopping-cart/categories/categories.component';
+import {FiltersComponent} from './components/shopping-cart/filters/filters.component';
 import {CartComponent} from './components/shopping-cart/cart/cart.component';
-import {ProductListComponent} from './components/shopping-cart/product-list/product-list.component';
 import {CartItemComponent} from './components/shopping-cart/cart/cart-item/cart-item.component';
-import {ProductItemComponent} from './components/shopping-cart/product-list/product-item/product-item.component';
 import {LoginComponent} from './components/shared/login/login.component';
 import {FormsModule} from '@angular/forms';
-import {RegisterComponent} from './components/register/register.component';
-import { CategoryListComponent } from './components/shopping-cart/product-list/category-list/category-list.component';
-import { AccessoriesComponent } from './components/shopping-cart/product-list/accessories/accessories.component';
+import { CategoryListComponent } from './components/shopping-cart/category-list/category-list.component';
+import { SmartphoneListComponent } from './components/shopping-cart/smartphone-list/smartphone-list.component';
+import { TabletListComponent } from './components/shopping-cart/tablet-list/tablet-list.component';
+import { WatchListComponent } from './components/shopping-cart/watch-list/watch-list.component';
+import { AccessoryListComponent } from './components/shopping-cart/accessory-list/accessory-list.component';
+import { ProductListComponent } from './components/shopping-cart/product-list/product-list.component';
+import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
+import { RegisterComponent } from './components/shared/register/register.component';
+import { DetailsComponent } from './components/shopping-cart/details/details.component';
 
 @NgModule({
   declarations: [
@@ -26,22 +30,26 @@ import { AccessoriesComponent } from './components/shopping-cart/product-list/ac
     FooterComponent,
     NavComponent,
     ShoppingCartComponent,
-    CategoriesComponent,
+    FiltersComponent,
     CartComponent,
-    ProductListComponent,
     CartItemComponent,
-    ProductItemComponent,
     LoginComponent,
-    RegisterComponent,
     CategoryListComponent,
-    AccessoriesComponent
+    SmartphoneListComponent,
+    TabletListComponent,
+    WatchListComponent,
+    AccessoryListComponent,
+    ProductListComponent,
+    ProductItemComponent,
+    RegisterComponent,
+    DetailsComponent
+
   ],
   imports: [
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-
+    FormsModule
   ],
 
   providers: [],

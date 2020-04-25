@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
 export class MessengerService {
 
   subject = new Subject();
+  category = new Subject();
 
   constructor() { }
 
@@ -17,5 +18,13 @@ export class MessengerService {
 
   getMsg() {
     return this.subject.asObservable();
+  }
+
+  sendCatMsg(category) {
+    this.category.next(category);
+  }
+
+  getCatMsg() {
+    return this.category.asObservable();
   }
 }
