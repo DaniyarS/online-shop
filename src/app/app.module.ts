@@ -43,6 +43,7 @@ import { DetailsComponent } from './components/shopping-cart/details/details.com
     ProductItemComponent,
     RegisterComponent,
     DetailsComponent
+
   ],
   imports: [
     FlexLayoutModule,
