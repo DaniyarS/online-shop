@@ -17,13 +17,14 @@ export class AppComponent  implements OnInit{
     const token = localStorage.getItem('token');
     if (token) {
       this.logged = true;
+
     }
   }
 
   login() {
     this.categoryService.login(this.username, this.password)
       .subscribe(res => {
-
+        alert('Dear ' + this.username + ' Welcome!');
         localStorage.setItem('token', res.token);
 
         this.logged = true;
