@@ -6,6 +6,7 @@ import {TabletListComponent} from './components/shopping-cart/tablet-list/tablet
 import {WatchListComponent} from './components/shopping-cart/watch-list/watch-list.component';
 import {AccessoryListComponent} from './components/shopping-cart/accessory-list/accessory-list.component';
 import {DetailsComponent} from './components/shopping-cart/details/details.component';
+import {RegisterComponent} from './components/shared/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/smartphones', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'watches', component: WatchListComponent },
   { path: 'accessories', component: AccessoryListComponent},
   { path: 'login', component: LoginComponent },
-  { path: ':id/:id', component: DetailsComponent}
+  { path: ':id/:id', component: DetailsComponent},
+  { path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

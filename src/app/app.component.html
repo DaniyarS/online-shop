@@ -1,7 +1,7 @@
 <app-nav></app-nav>
 
 <div *ngIf="!logged" >
-  <form>
+  <form class="formaa">
     <div class="input">
       <div class="form-group">
         <input class="form-control" type="text" autocomplete="off" placeholder="Username" id="username" name="username" [(ngModel)] ="username">
@@ -16,11 +16,12 @@
   </form>
 </div>
 <div class="container " *ngIf="logged">
+  <button class="btn btn-outline-primary" id="logout" (click)="logout()">Logout</button>
   <router-outlet></router-outlet>
   <div class="row">
     <div class="col">
       <app-shopping-cart></app-shopping-cart>
-      <button (click)="logout">Logout</button>
+
     </div>
   </div>
 
