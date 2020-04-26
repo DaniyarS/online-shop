@@ -7,3 +7,7 @@ export class Category {
     this.name = name;
   }
 }
+export class LoginResponse {
+  token: string;
+
+}

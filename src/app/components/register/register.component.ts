@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  RegisterUser() {
+  Register() {
     alert('Done');
   }
 }

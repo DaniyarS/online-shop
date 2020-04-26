@@ -22,6 +22,8 @@ import { ProductListComponent } from './components/shopping-cart/product-list/pr
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
 import { RegisterComponent } from './components/shared/register/register.component';
 import { DetailsComponent } from './components/shopping-cart/details/details.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthInterceptor} from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -49,10 +51,15 @@ import { DetailsComponent } from './components/shopping-cart/details/details.com
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
 
-  providers: [],
+  providers: [{
+    provide : HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 
 import {Product} from '../models/product';
-import {Observable, of} from 'rxjs';
 import {CATEGORIES} from '../models/categories';
 import {Category} from '../models/category';
 

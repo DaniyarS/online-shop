@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoryService} from '../../../services/category.service';
 
 @Component({
   selector: 'app-login',
@@ -6,21 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username: string;
-  password: string;
-  constructor() { }
+
+  // tslint:disable-next-line:no-shadowed-variable
+  username: '';
+  password: '';
+  constructor(private CategoryService: CategoryService) { }
 
   ngOnInit(): void {
   }
-  LoginUser(){
-    if (this.username == "Nurgissa" && this.password == "123"){
-      alert("Welcome, Nurgissa");
-    } else{
-      alert("Incorrect data")
-    }
-    {
+  login() {
 
-    }
   }
+
 
 }
