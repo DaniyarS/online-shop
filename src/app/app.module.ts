@@ -15,9 +15,23 @@ import {CartItemComponent} from './components/shopping-cart/cart/cart-item/cart-
 import {ProductItemComponent} from './components/shopping-cart/product-list/product-item/product-item.component';
 import {LoginComponent} from './components/shared/login/login.component';
 import {FormsModule} from '@angular/forms';
+<<<<<<< Updated upstream
 import {RegisterComponent} from './components/register/register.component';
 import { CategoryListComponent } from './components/shopping-cart/product-list/category-list/category-list.component';
 import { AccessoriesComponent } from './components/shopping-cart/product-list/accessories/accessories.component';
+=======
+import {CategoryListComponent} from './components/shopping-cart/category-list/category-list.component';
+import {SmartphoneListComponent} from './components/shopping-cart/smartphone-list/smartphone-list.component';
+import {TabletListComponent} from './components/shopping-cart/tablet-list/tablet-list.component';
+import {WatchListComponent} from './components/shopping-cart/watch-list/watch-list.component';
+import {AccessoryListComponent} from './components/shopping-cart/accessory-list/accessory-list.component';
+import {ProductListComponent} from './components/shopping-cart/product-list/product-list.component';
+import {ProductItemComponent} from './components/shopping-cart/product-list/product-item/product-item.component';
+import {RegisterComponent} from './components/shared/register/register.component';
+import {DetailsComponent} from './components/shopping-cart/details/details.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthInterceptor} from './auth.interceptor';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -42,6 +56,14 @@ import { AccessoriesComponent } from './components/shopping-cart/product-list/ac
     AppRoutingModule,
     FormsModule,
 
+<<<<<<< Updated upstream
+=======
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }
+>>>>>>> Stashed changes
   ],
 
   providers: [],

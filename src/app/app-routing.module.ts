@@ -9,6 +9,15 @@ import {AccessoriesComponent} from './components/shopping-cart/product-list/acce
 
 
 const routes: Routes = [
+<<<<<<< Updated upstream
+=======
+  { path: '', redirectTo: '/Smartphones', pathMatch: 'full'},
+  { path: 'Smartphones', component: SmartphoneListComponent},
+  { path: 'Phones', component: SmartphoneListComponent},
+  { path: 'Tablets', component: TabletListComponent},
+  { path: 'Watches', component: WatchListComponent },
+  { path: 'Accessories', component: AccessoryListComponent},
+>>>>>>> Stashed changes
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'categories', component: CategoryListComponent},
